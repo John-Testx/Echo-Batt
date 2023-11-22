@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Echo-batt</string>
+    <string name="for_exit">Exit</string>
+    <string name="address_row">Address</string>
+    <string name="devices">Maquinas</string>
+    <string name="admins">Administradores</string>
+    <string name="machine">Maquinas</string>
+    <string name="add_admin">Add Admin +</string>
+    <string name="hint_login_name">Nombre</string>
+    <string name="admin_name">Nombre del Admin</string>
+    <string name="admin_phone">Numero de Telefono</string>
+    <string name="form">Form</string>
+    <string name="btn_modify">Modify</string>
+    <string name="btn_add">Add</string>
+    <string name="hint_login_password">Contraseña</string>
+    <string name="add_device">Add Device +</string>
+    <string name="list_admin">Lista Administradores</string>
+    <string name="list_device">Lista Maquinas</string>
+    <string name="hint_admin">Introduzca el nombre del Administrador</string>
+    <string name="hint_device">Codigo Maquina</string>
+    <string name="find">Buscar</string>
+    <string name="login">Login</string>
+
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".anadirAdministrador"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/my_app_secondary"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="40dp"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvBuscar"
+        style="@style/Widget.MaterialComponents.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:background="@color/my_app_secondary"
+        android:gravity="center"
+        android:text="@string/form"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="visible" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCodigo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:inputType="text"
+            android:background="@color/back_placeholders"
+            android:hint="Codigo Maquina"
+            android:padding="20dp"
+            android:layout_marginTop="10dp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUbicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:padding="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/back_placeholders"
+            android:inputType="text"
+            android:hint="Ubicacion" />
+
+    <Button
+        android:id="@+id/btnCrear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_add"
+        android:layout_gravity="bottom|center"
+        android:textColor="@color/black" />
+    </LinearLayout>
+
+</LinearLayout>

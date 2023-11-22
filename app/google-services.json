@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1046318030179",
+    "firebase_url": "https://puntosechobatt-default-rtdb.firebaseio.com",
+    "project_id": "puntosechobatt",
+    "storage_bucket": "puntosechobatt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1046318030179:android:3f44a2805b8dee2b940756",
+        "android_client_info": {
+          "package_name": "com.example.basicui2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkQf1PaRYqAHOuB5sQUyRoGDpuNV75_uk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

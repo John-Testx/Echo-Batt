@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Menu"
+    android:weightSum="3"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    android:scrollbars="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textColor="@color/white"
+        android:background="@color/my_app_secondary"
+        android:text="Inicio"
+        android:layout_weight="0.5"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textAlignment="center"
+        style="@style/Widget.MaterialComponents.TextView"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/tvSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="0.5"
+        android:layout_marginTop="10dp"
+        app:cornerRadius="20dp"
+        android:background="@color/red_orange"
+        android:gravity="center"
+        android:onClick="pointsSummary"
+        android:text="@string/devices"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/tvRecycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:height="2dp"
+        app:cornerRadius="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/red_orange"
+        android:gravity="center"
+        android:onClick="batteryCounter"
+        android:text="@string/admins"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnExit"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginTop="10dp"
+        android:onClick="exit"
+        android:text="Exit"
+        android:layout_weight="0.2"/>
+
+
+</LinearLayout>
