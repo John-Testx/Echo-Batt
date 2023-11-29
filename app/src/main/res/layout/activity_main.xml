@@ -6,80 +6,77 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="4">
+    android:weightSum="3">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/loginContainer"
+        android:layout_width="305dp"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:background="@color/my_app_secondary"
         android:layout_gravity="center_horizontal"
-        android:padding="20dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-        <TextView
+        <ImageView
             android:id="@+id/tvLogin"
             android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:textColor="@color/black"
-            android:text="Login"
-            android:textSize="20sp"
-            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/echobatt_login_icon_foreground"
             android:textAlignment="center"
-            android:gravity="center" />
+            android:textColor="@color/black" />
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etSend"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_marginTop="64dp"
-            android:ems="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="10dp"
             android:background="@color/back_placeholders"
-            android:textColor="@color/black"
+            android:ems="20"
+            android:hint="@string/hint_login_name"
             android:inputType="text"
-            android:hint="@string/hint_login_name"/>
+            android:padding="10dp"
+            android:textColor="@color/black" />
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etSend2"
-            android:layout_gravity="center"
-            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:background="@color/back_placeholders"
+            android:ems="20"
+            android:hint="@string/hint_login_password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="@color/black" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_marginTop="32dp"
-            android:ems="10"
-            android:inputType="text"
-            android:hint="@string/hint_login_password" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Remember Me"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFizz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            android:height="2dp"
+            android:onClick="login"
+            android:ems="20"
+            android:text="@string/login"
+            app:cornerRadius="2dp" />
 
     </LinearLayout>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnFizz"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="10dp"
-        android:onClick="login"
-        android:height="2dp"
-        app:cornerRadius="30dp"
-        android:text="@string/login"
-        android:layout_weight="0.5"/>
 
-    <Button
-        android:id="@+id/btnX"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="10dp"
-        android:onClick="options"
-        android:visibility="gone"
-        android:text="x"
-        android:layout_weight="0.5"
-        />
 
 </LinearLayout>

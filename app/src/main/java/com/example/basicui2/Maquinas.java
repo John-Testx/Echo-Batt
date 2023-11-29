@@ -34,6 +34,7 @@ public class Maquinas extends AppCompatActivity {
     private MaquinaAdapter l;
 
     String ubicMaquina;
+    ArrayList<MaquinaReciclaje> maquinas = new ArrayList<>();
     MaquinaReciclaje maquinaFound;
     public boolean searching = false;
 
@@ -88,6 +89,7 @@ public class Maquinas extends AppCompatActivity {
                 if(newText.isEmpty()){
 
                     searching=false;
+                    maquinas.clear();
                     l.clear();
                     maquinaList();
                     l.notifyDataSetChanged();
@@ -125,19 +127,20 @@ public class Maquinas extends AppCompatActivity {
                                 a.getUbicacion().equals(ubicMaquina) || a.getUbicacion().startsWith(ubicMaquina.substring(0, 3))) {
 
                             maquinaFound = a;
-
+                            maquinas.add(a);
                             Toast.makeText(getApplicationContext(),
                                     String.format("Location in %s has been Found. ",maquinaFound.getUbicacion()),Toast.LENGTH_SHORT).show();
 
-                            l.clear();
-                            l.add(maquinaFound);
-                            lvCounter.setAdapter(l);
-                            l.notifyDataSetChanged();
-
-                            return;
-
                         }
+
                     }
+
+                    l.clear();
+                    //l.add(maquinaFound);
+                    l.addAll(maquinas);
+                    lvCounter.setAdapter(l);
+                    l.notifyDataSetChanged();
+
                 }
                 if (!searching) {
                     for (DataSnapshot item : snapshot.getChildren()) {
