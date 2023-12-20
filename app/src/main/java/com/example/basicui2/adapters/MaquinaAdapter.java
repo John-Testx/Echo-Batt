@@ -1,6 +1,7 @@
 package com.example.basicui2.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,8 +9,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.basicui2.DeviceInfo;
 import com.example.basicui2.MainActivity;
 import com.example.basicui2.R;
+import com.example.basicui2.anadirAdministrador;
 import com.example.basicui2.controller.AdminController;
 import com.example.basicui2.controller.MaquinaController;
 import com.example.basicui2.models.MaquinaReciclaje;
@@ -27,12 +30,13 @@ public class MaquinaAdapter extends ArrayAdapter<MaquinaReciclaje>{
             MaquinaReciclaje dev = getItem(position);
 
             if (convertView == null) {
-                convertView = LayoutInflater.from(getContext()).inflate(R.layout.bat_item, parent, false);
+                convertView = LayoutInflater.from(getContext()).inflate(R.layout.maquina_item, parent, false);
             }
 
-            TextView quan = convertView.findViewById(R.id.tv_telefono);
-            TextView bat = convertView.findViewById(R.id.tv_nombre);
-            Button delete = convertView.findViewById(R.id.btn_opcion);
+            TextView code = convertView.findViewById(R.id.tv_codigo);
+            TextView location = convertView.findViewById(R.id.tv_ubicacion_maquina);
+            Button delete = convertView.findViewById(R.id.btn_option_delete);
+            Button deviceInfo= convertView.findViewById(R.id.btn_get_device_info);
 
             delete.setOnClickListener(v -> {
                 MainActivity.databaseReference.child("Maquina").child(dev.getCodigo()).removeValue();
@@ -40,11 +44,18 @@ public class MaquinaAdapter extends ArrayAdapter<MaquinaReciclaje>{
                 notifyDataSetChanged();
             });
 
+            deviceInfo.setOnClickListener(v -> {
+                Intent i = new Intent(getContext(), DeviceInfo.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                i.putExtra("info",dev.getCodigo());
+                getContext().startActivity(i);
+            });
+
             String type= dev.getCodigo();
             String qty= dev.getUbicacion();
 
-            bat.setText(type);
-            quan.setText(qty);
+            code.setText(type);
+            location.setText(qty);
 
             return convertView;
         }

@@ -6,18 +6,23 @@ public class MaquinaReciclaje implements Serializable {
     private String codigo;
     private String ubicacion;
     private int nivelGas;
+    private ArduinoData dispositivo;
 
     // Constructor
     public MaquinaReciclaje(String codigo, String ubicacion) {
         this.codigo = codigo;
         this.ubicacion = ubicacion;
-        this.nivelGas = 0; // O el valor inicial que desees
+        this.nivelGas = 0;
+        this.dispositivo = new ArduinoData();
     }
     public MaquinaReciclaje(){}
 
-    @Override
-    public String toString() {
-        return this.getCodigo();
+    public ArduinoData getDispositivo() {
+        return dispositivo;
+    }
+
+    public void setDispositivo(ArduinoData dispositivo) {
+        this.dispositivo = dispositivo;
     }
 
     public String getCodigo() {
