@@ -22,6 +22,7 @@ public class DeviceInfo extends AppCompatActivity {
 
     public TextView nivelGas;
     public TextView batDimension;
+    public TextView batType;
     public String codigoMaquina;
 
     @Override
@@ -29,6 +30,7 @@ public class DeviceInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_device_info);
 
+        batType = findViewById(R.id.tv_bat_type);
         nivelGas= findViewById(R.id.tv_nivelgas);
         batDimension = findViewById(R.id.tv_dimension);
 
@@ -56,9 +58,9 @@ public class DeviceInfo extends AppCompatActivity {
                     MaquinaReciclaje a = item.getValue(MaquinaReciclaje.class);
 
                     if (a != null && a.getCodigo().equals(codigoMaquina)) {
-                        String d = Integer.toString(a.getDispositivo().getBatDimension());
-                        String g = String.format(Locale.US,"%d ppm",a.getDispositivo().getNivelGas());
-
+                        String d = a.getDispositivo().getBatDimension();
+                        String g = a.getDispositivo().getNivelGas();
+                        calcularBateria(a.getDispositivo().getBatDimension());
                         batDimension.setText(d);
                         nivelGas.setText(g);
                     }
@@ -71,5 +73,19 @@ public class DeviceInfo extends AppCompatActivity {
             }
         });
     }
+
+    private void calcularBateria(String i){
+        float value = Float.parseFloat(i);
+        if (value>3 && value<=5){
+            batType.setText("AAA");
+        }
+        if (value>9 && value<=11){
+            batType.setText("AA");
+        }
+        if (value>14 && value<=16){
+            batType.setText("C-Type");
+        }
+    }
+    
 
 }

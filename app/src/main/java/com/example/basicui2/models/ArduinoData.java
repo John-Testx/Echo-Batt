@@ -3,27 +3,27 @@ package com.example.basicui2.models;
 import java.io.Serializable;
 
 public class ArduinoData implements Serializable {
-    private int nivelGas;
-    private int batDimension;
+    private String nivelGas;
+    private String batDimension;
 
     public ArduinoData() {
-        nivelGas=0;
-        batDimension=0;
+        nivelGas="0";
+        batDimension="0";
     }
 
-    public int getNivelGas() {
+    public String getNivelGas() {
         return nivelGas;
     }
 
-    public void setNivelGas(int nivelGas) {
+    public void setNivelGas(String nivelGas) {
         this.nivelGas = nivelGas;
     }
 
-    public int getBatDimension() {
+    public String getBatDimension() {
         return batDimension;
     }
 
-    public void setBatDimension(int batDimension) {
+    public void setBatDimension(String batDimension) {
         this.batDimension = batDimension;
     }
 }

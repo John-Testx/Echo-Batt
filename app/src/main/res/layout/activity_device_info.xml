@@ -86,6 +86,22 @@
             app:layout_constraintStart_toStartOf="@+id/tv_nivelgas"
             app:layout_constraintTop_toBottomOf="@+id/tv_nivelgas" />
 
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_bat_type"
+            style="@style/Widget.MaterialComponents.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/my_app_secondary"
+            android:gravity="center"
+            android:text="AAA"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_dimension"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_dimension"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dimension"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
